@@ -1,0 +1,303 @@
+// Generated for: spectre
+// Generated on: Sep 13 15:26:11 2024
+// Design library name: npps_library
+// Design cell name: carry_look
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/home/install/FOUNDRY/analog/180nm/models/spectre/gpdk.scs" section=stat
+
+// Library name: npps_library
+// Cell name: NAND
+// View name: schematic
+subckt NAND A B OUT VDD VSS
+    PM1 (OUT A VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM0 (OUT B VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM1 (net1 A VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM0 (OUT B net1 VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+ends NAND
+// End of subcircuit definition.
+
+// Library name: npps_library
+// Cell name: NOR
+// View name: schematic
+subckt NOR A B out vdd vss
+    PM1 (out B net1 vdd) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM0 (net1 A vdd vdd) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM1 (out B vss vss) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM0 (out A vss vss) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+ends NOR
+// End of subcircuit definition.
+
+// Library name: npps_library
+// Cell name: NOT
+// View name: schematic
+subckt NOT Vdd Vss in out
+    NM0 (out in Vss Vss) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM0 (out in Vdd Vdd) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+ends NOT
+// End of subcircuit definition.
+
+// Library name: npps_library
+// Cell name: AND
+// View name: schematic
+subckt AND A B OUT VDD VSS
+    NM2 (OUT net1 VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM1 (net1 A net2 VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM0 (net2 B VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM2 (net1 A VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM1 (net1 B VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM0 (OUT net1 VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+ends AND
+// End of subcircuit definition.
+
+// Library name: npps_library
+// Cell name: 3_AND
+// View name: schematic
+subckt npps_library_3_AND_schematic A B C OUT VDD VSS
+    PM3 (OUT net1 VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM2 (net1 C VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM1 (net1 B VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM0 (net1 A VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM3 (OUT net1 VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM2 (net3 C VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM1 (net2 B net3 VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM0 (net1 A net2 VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+ends npps_library_3_AND_schematic
+// End of subcircuit definition.
+
+// Library name: npps_library
+// Cell name: 4_AND
+// View name: schematic
+subckt npps_library_4_AND_schematic A B C D OUT VDD VSS
+    PM4 (OUT net1 VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM3 (net1 D VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM2 (net1 C VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM1 (net1 B VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM0 (net1 A VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM4 (OUT net1 VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM3 (net4 D VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM2 (net3 C net4 VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM1 (net2 B net3 VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM0 (net1 A net2 VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+ends npps_library_4_AND_schematic
+// End of subcircuit definition.
+
+// Library name: npps_library
+// Cell name: 5_AND
+// View name: schematic
+subckt npps_library_5_AND_schematic A0 A1 A2 A3 A4 S VDD VSS
+    PM5 (S net1 VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM4 (net1 A4 VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM3 (net1 A3 VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM2 (net1 A2 VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM1 (net1 A1 VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM0 (net1 A0 VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM5 (S net1 VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM4 (net30 A4 VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM3 (net27 A3 net30 VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM2 (net24 A2 net27 VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM1 (net21 A1 net24 VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM0 (net1 A0 net21 VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+ends npps_library_5_AND_schematic
+// End of subcircuit definition.
+
+// Library name: npps_library
+// Cell name: 3_NOR
+// View name: schematic
+subckt npps_library_3_NOR_schematic A B C VDD VSS Y
+    NM2 (Y A VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u pd=5.2u \
+        m=(1)*(1)
+    NM1 (Y B VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u pd=5.2u \
+        m=(1)*(1)
+    NM0 (Y C VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u pd=5.2u \
+        m=(1)*(1)
+    PM2 (net2 A VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM1 (net1 B net2 VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM0 (Y C net1 VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u pd=5.2u \
+        m=(1)*(1)
+ends npps_library_3_NOR_schematic
+// End of subcircuit definition.
+
+// Library name: npps_library
+// Cell name: 4_NOR
+// View name: schematic
+subckt npps_library_4_NOR_schematic A0 A1 A2 A3 OUT VDD VSS
+    PM3 (OUT A3 net3 VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM2 (net3 A2 net2 VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM1 (net2 A1 net1 VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM0 (net1 A0 VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM3 (OUT A0 VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM2 (OUT A1 VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM1 (OUT A2 VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM0 (OUT A3 VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+ends npps_library_4_NOR_schematic
+// End of subcircuit definition.
+
+// Library name: npps_library
+// Cell name: 5_NOR
+// View name: schematic
+subckt npps_library_5_NOR_schematic A B C D E VDD VSS Y
+    NM4 (Y E VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u pd=5.2u \
+        m=(1)*(1)
+    NM3 (Y D VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u pd=5.2u \
+        m=(1)*(1)
+    NM0 (Y C VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u pd=5.2u \
+        m=(1)*(1)
+    NM2 (Y A VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u pd=5.2u \
+        m=(1)*(1)
+    NM1 (Y B VSS VSS) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u pd=5.2u \
+        m=(1)*(1)
+    PM4 (net28 D net29 VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM3 (net29 E VDD VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM2 (net27 A net28 VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM1 (net8 B net27 VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM0 (Y C net8 VDD) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u pd=5.2u \
+        m=(1)*(1)
+ends npps_library_5_NOR_schematic
+// End of subcircuit definition.
+
+// Library name: npps_library
+// Cell name: OR
+// View name: schematic
+subckt OR A B Vdd Vss out
+    PM2 (out net20 Vdd Vdd) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM3 (net20 B net3 Vdd) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    PM0 (net3 A Vdd Vdd) pmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM3 (out net20 Vss Vss) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM5 (net20 B Vss Vss) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+    NM4 (net20 A Vss Vss) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u \
+        pd=5.2u m=(1)*(1)
+ends OR
+// End of subcircuit definition.
+
+// Library name: npps_library
+// Cell name: XOR
+// View name: schematic
+subckt XOR A B OUT VDD VSS
+    I1 (VDD VSS B net4) NOT
+    I0 (VDD VSS A net1) NOT
+    I3 (A net4 net3 VDD VSS) AND
+    I2 (net1 B net2 VDD VSS) AND
+    I4 (net2 net3 VDD VSS OUT) OR
+ends XOR
+// End of subcircuit definition.
+
+// Library name: npps_library
+// Cell name: carry_look
+// View name: schematic
+I3 (A1 B1 net18 VDD VSS) NAND
+I2 (A2 B2 net13 VDD VSS) NAND
+I1 (A4 B4 A VDD VSS) NAND
+I0 (A3 B3 net3 VDD VSS) NAND
+I28 (net23 net72 net147 VDD VSS) NOR
+I7 (B4 A4 net38 VDD VSS) NOR
+I6 (B3 A3 net33 VDD VSS) NOR
+I5 (B2 A2 net28 VDD VSS) NOR
+I4 (B1 A1 net23 VDD VSS) NOR
+I13 (VDD VSS net38 B) NOT
+I12 (VDD VSS net33 net58) NOT
+I11 (VDD VSS net28 net54) NOT
+I10 (VDD VSS net23 net50) NOT
+I9 (VDD VSS net42 net46) NOT
+I8 (VDD VSS CIN net42) NOT
+I27 (net38 A net142 VDD VSS) AND
+I23 (A B OUT VDD VSS) AND
+I22 (net28 net3 net111 VDD VSS) AND
+I18 (net3 net58 net87 VDD VSS) AND
+I17 (net23 net13 net82 VDD VSS) AND
+I16 (net13 net54 net77 VDD VSS) AND
+I15 (net42 net18 net72 VDD VSS) AND
+I14 (net18 net50 net67 VDD VSS) AND
+I26 (net28 net18 A net137 VDD VSS) npps_library_3_AND_schematic
+I20 (net23 net3 net13 net99 VDD VSS) npps_library_3_AND_schematic
+I19 (net13 net18 net42 net93 VDD VSS) npps_library_3_AND_schematic
+I25 (net23 net18 A net13 net131 VDD VSS) npps_library_4_AND_schematic
+I21 (net3 net18 net13 net42 net106 VDD VSS) npps_library_4_AND_schematic
+I24 (A net18 net13 net18 net42 net124 VDD VSS) \
+        npps_library_5_AND_schematic
+I29 (net28 net82 net93 VDD VSS net114) npps_library_3_NOR_schematic
+I30 (net33 net111 net99 net106 net115 VDD VSS) \
+        npps_library_4_NOR_schematic
+I31 (net38 net142 net137 net131 net124 VDD VSS COUT) \
+        npps_library_5_NOR_schematic
+I35 (OUT net115 S4 VDD VSS) XOR
+I34 (net87 net114 S3 VDD VSS) XOR
+I33 (net77 net147 S2 VDD VSS) XOR
+I32 (net67 net46 S1 VDD VSS) XOR
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub

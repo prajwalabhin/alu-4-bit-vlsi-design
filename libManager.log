@@ -1,0 +1,109 @@
+\o Program:		@(#)$CDS: libManager version 6.1.8 - CAT37 03/31/2021 15:41 (sjfdcl1031) $
+\o Sub version:		sub-version  s184 
+\o Arguments:		-mpssession virtuoso14267 -mpshost cad15 
+\o Working Directory:	cad15:/home/student/Desktop/npps_project
+\o 64-bit offsets
+\o Qt version: 		5.9.1
+\o Log file is "/home/student/Desktop/npps_project/libManager.log".
+\o Opening libManager window.
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(683 112 602 478))
+\o changeWorkingDir("/home/student/Desktop/npps_project") unnecessary.
+\o ddSetForcedLib("") unnecessary.
+\o MPS service: map window
+\o Library Manager customization server connected.
+\w Warning: The directory: '/home/student/Desktop/npps_project/sample123' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'sample123'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/simple' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'simple'.
+\a cdsLibManager->libListBox->value = "npps_dadda"
+\a cdsLibManager->libLineEdit->value = "npps_dadda"
+\a cdsLibManager->editDeleteButton->value = t
+\a deleteForm->deleteFilterEdit->value = "*"
+\a deleteForm->notDeleteFilterEdit->value = "*"
+\a nrSetWindowVisibility(deleteForm "show")
+\a nrSetCurrentWindow(deleteForm)
+\a nrResizeWindow(deleteForm list(661 136 627 425))
+\a deleteForm->notDeleteListBox->value = '("sample" )
+\a deleteForm->moveToDeleteButton->value = t
+\a deleteForm->moveToDontDeleteButton->value = t
+\a deleteForm->OK->value = t
+\o QUESTION (CLM-199): The following 1 items are marked for deletion.  Are you sure?
+\a nrSetWindowVisibility(mcMBXDLG "show")
+\a nrSetCurrentWindow(mcMBXDLG)
+\a nrResizeWindow(mcMBXDLG list(835 167 278 289))
+\a mcMBXDLG->pushButton1->value = t
+\o Deleting 1 library.
+\o Deleting library "npps_dadda".
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\o Deleted library 'npps_dadda'.
+\o Delete of library "npps_dadda" succeeded.
+\o Deletion of library done.
+\a nrResizeWindow(workingDialogForm list(840 282 268 133))
+\a nrResizeWindow(deleteForm list(661 62 627 425))
+\a nrSetCurrentWindow(workingDialogForm)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: The directory: '/home/student/Desktop/npps_project/sample123' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'sample123'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/simple' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'simple'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/sample123' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'sample123'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/simple' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'simple'.
+\a nrResizeWindow(workingDialogForm list(840 208 268 133))
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\a _lmgrCloseIconify("cdsLibManager" 1)
+\w Warning: The directory: '/home/student/Desktop/npps_project/sample123' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'sample123'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/simple' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'simple'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/sample123' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'sample123'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/simple' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'simple'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/sample123' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'sample123'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/simple' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'simple'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/sample123' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'sample123'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/simple' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'simple'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/sample123' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'sample123'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/simple' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'simple'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/sample123' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'sample123'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/simple' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'simple'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/sample123' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'sample123'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/simple' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'simple'.
+\a nrSetWindowVisibility(cdsLibManager "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "npps_lib_2"
+\a cdsLibManager->libLineEdit->value = "npps_lib_2"
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\a _lmgrCloseIconify("cdsLibManager" 1)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: The directory: '/home/student/Desktop/npps_project/sample123' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'sample123'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/simple' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'simple'.
+\a cdsLibManager->libListBox->value = "npps_lib_2"
+\a cdsLibManager->libLineEdit->value = "npps_lib_2"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\w Warning: The directory: '/home/student/Desktop/npps_project/sample123' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'sample123'.
+\w Warning: The directory: '/home/student/Desktop/npps_project/simple' does not exist
+\w 	but was defined in libFile '/home/student/Desktop/npps_project/cds.lib' for Lib 'simple'.
+\a cdsLibManager->libListBox->value = "npps_lib_2"
+\a cdsLibManager->libLineEdit->value = "npps_lib_2"

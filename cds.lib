@@ -1,0 +1,7 @@
+SOFTINCLUDE /home/install/IC618/share/cdssetup/cds.lib
+DEFINE npps_library /home/student/Desktop/npps_project/npps_library
+DEFINE simple /home/student/Desktop/npps_project/simple
+DEFINE sample123 /home/student/Desktop/npps_project/sample123
+DEFINE npps_lib_2 /home/student/Desktop/npps_project/npps_lib_2
+#Removed by ddDeleteObj: DEFINE npps_dadda /home/student/Desktop/npps_project/npps_dadda
+DEFINE gate /home/student/Desktop/npps_project/gate
